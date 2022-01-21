@@ -21,7 +21,6 @@ public class MovieService {
 	
 	public Movie addMovie(Movie movie) {
 		Movie res = this.movieRepository.save(movie);
-		//System.out.println(res.toString());
 		return res;
 	}
 	
@@ -47,6 +46,14 @@ public class MovieService {
 	
 	public void deleteMovie(int id) {
 		this.movieRepository.deleteMovieById(id);
+	}
+	
+	public List<Movie> getMoviesWhereFavoriteIs(boolean isFavorite) {
+		return this.movieRepository.getMoviesWhereFavoriteIs(isFavorite);
+	}
+	
+	public List<Movie> getAllMoviesSorted() {
+		return movieRepository.getAllMoviesSorted();
 	}
 
 }

@@ -21,7 +21,7 @@ public class IMDBService {
 
 	public IMDBMovie[] getMoviesPlainJSON(String name) {
 		String url = "https://imdb-api.com/en/API/SearchMovie/" + this.APIKey+"/" + name;
-		ResponseEntity<IMDBResponse> response = this.restTemplate.getForEntity(url, IMDBResponse.class);		
+		ResponseEntity<IMDBResponse> response = this.restTemplate.getForEntity(url, IMDBResponse.class);
 		return response.getBody().getResults();
 	}
 	

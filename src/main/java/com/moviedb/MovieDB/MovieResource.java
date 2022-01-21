@@ -87,5 +87,18 @@ public class MovieResource {
 		
 		return new ResponseEntity<>(createdMovies, HttpStatus.OK);
 	}
+	
+	@GetMapping("/favorites")
+	public ResponseEntity<List<Movie>> getFavoriteMovies() {
+		
+		List<Movie> createdMovies = this.movieService.getMoviesWhereFavoriteIs(true);
+		return new ResponseEntity<>(createdMovies, HttpStatus.OK);
+	}
+	
+	@GetMapping("/all/sorted")
+	public ResponseEntity<List<Movie>> getAllMoviesSorted() {
+		List<Movie> movies = this.movieService.getAllMoviesSorted();
+		return new ResponseEntity<>(movies, HttpStatus.OK);
+	}
 
 }
