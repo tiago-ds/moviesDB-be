@@ -1,25 +1,22 @@
 package com.moviedb.MovieDB.models;
 
-import java.io.Serializable;
-
-public class IMDBResponse implements Serializable{
+public class ImdbResponse {
 	private String searchType;
-	private IMDBMovie[] results;
+	private ImdbMovie[] results;
 	private String expression;
 	private String errorMessage;
 	
-	public IMDBResponse(String searchType, IMDBMovie[] results, String expression) {
-		super();
+	public ImdbResponse(String searchType, ImdbMovie[] results, String expression) {
 		this.searchType = searchType;
 		this.results = results;
 		this.expression = expression;
 	}
 
-	public IMDBMovie[] getResults() {
+	public ImdbMovie[] getResults() {
 		return results;
 	}
 
-	public void setResults(IMDBMovie[] results) {
+	public void setResults(ImdbMovie[] results) {
 		this.results = results;
 	}
 

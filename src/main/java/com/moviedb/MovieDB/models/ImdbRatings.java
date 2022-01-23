@@ -1,7 +1,7 @@
 package com.moviedb.MovieDB.models;
 
-public class IMDBRatings {
-	private String imDbId;
+public class ImdbRatings {
+	private String imdbId;
 	private String title;
 	private String fullTitle;
 	private String type;
@@ -10,14 +10,13 @@ public class IMDBRatings {
 	private int metacritic;
 	private double theMovieDb;
 	private int rottenTomatoes;
-	private String tV_com;
+	private String tvCom;
 	private double filmAffinity;
 	private String errorMessage;
-	public IMDBRatings(String imDbId, String title, String fullTitle, String type, int year, double imDb,
-			int metacritic, double theMovieDb, int rottenTomatoes, String tV_com, double filmAffinity,
+	public ImdbRatings(String imdbId, String title, String fullTitle, String type, int year, double imDb,
+			int metacritic, double theMovieDb, int rottenTomatoes, String tvCom, double filmAffinity,
 			String errorMessage) {
-		super();
-		this.imDbId = imDbId;
+		this.imdbId = imdbId;
 		this.title = title;
 		this.fullTitle = fullTitle;
 		this.type = type;
@@ -26,15 +25,15 @@ public class IMDBRatings {
 		this.metacritic = metacritic;
 		this.theMovieDb = theMovieDb;
 		this.rottenTomatoes = rottenTomatoes;
-		this.tV_com = tV_com;
+		this.tvCom = tvCom;
 		this.filmAffinity = filmAffinity;
 		this.errorMessage = errorMessage;
 	}
 	public String getImDbId() {
-		return imDbId;
+		return imdbId;
 	}
-	public void setImDbId(String imDbId) {
-		this.imDbId = imDbId;
+	public void setImDbId(String imdbId) {
+		this.imdbId = imdbId;
 	}
 	public String getTitle() {
 		return title;
@@ -84,11 +83,11 @@ public class IMDBRatings {
 	public void setRottenTomatoes(int rottenTomatoes) {
 		this.rottenTomatoes = rottenTomatoes;
 	}
-	public String gettV_com() {
-		return tV_com;
+	public String getTvCom() {
+		return this.tvCom;
 	}
-	public void settV_com(String tV_com) {
-		this.tV_com = tV_com;
+	public void setTvCom(String tvCom) {
+		this.tvCom = tvCom;
 	}
 	public double getFilmAffinity() {
 		return filmAffinity;

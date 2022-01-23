@@ -1,14 +1,13 @@
 package com.moviedb.MovieDB.models;
 
-public class IMDBMovie{
+public class ImdbMovie{
 	private String id;
     private String resultType;
     private String image;
     private String title;
     private String description;
     
-	public IMDBMovie(String id, String resultType, String image, String title, String description) {
-		super();
+	public ImdbMovie(String id, String resultType, String image, String title, String description) {
 		this.id = id;
 		this.resultType = resultType;
 		this.image = image;

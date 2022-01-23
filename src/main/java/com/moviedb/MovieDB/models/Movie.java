@@ -6,8 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-
 @Entity
 public class Movie {
 	@Id
@@ -16,26 +14,27 @@ public class Movie {
 	private int id;
 	private String name;
 	private boolean favorite;
-	private double IMDBNote;
+	private double imdbRate;
 	private int launchYear;
 	private String image;
+	private String description;
 	
 	public Movie() {}
 	
-	public Movie(String name, boolean favorite, double IMDBNote, int launchYear, String image) {
-		super();
+	public Movie(String name, boolean favorite, double imdbRate, int launchYear, String image, String description) {
 		this.name = name;
 		this.favorite = favorite;
-		this.IMDBNote = IMDBNote;
+		this.imdbRate = imdbRate;
 		this.launchYear = launchYear;
 		this.image = image;
+		this.description = description;
 	}
 	
-	public int getMovieID() {
+	public int getMovieId() {
 		return id;
 	}
-	public void setMovieID(int movieID) {
-		this.id = movieID;
+	public void setMovieID(int movieId) {
+		this.id = movieId;
 	}
 	public String getName() {
 		return name;
@@ -49,11 +48,11 @@ public class Movie {
 	public void setFavorite(boolean favorite) {
 		this.favorite = favorite;
 	}
-	public double getIMDBNote() {
-		return IMDBNote;
+	public double getImbdRate() {
+		return imdbRate;
 	}
-	public void setIMDBNote(double IMDBNote) {
-		this.IMDBNote = IMDBNote;
+	public void setImdbRate(double imdbRate) {
+		this.imdbRate = imdbRate;
 	}
 	public int getLaunchYear() {
 		return launchYear;
@@ -67,10 +66,16 @@ public class Movie {
 	public void setImage(String image) {
 		this.image = image;
 	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
 	@Override
 	public String toString() {
-		return "Movie {movieID=" + id + ", name=" + name + ", favorite=" + favorite + ", IMDBNote=" + IMDBNote
+		return "Movie {movieId=" + id + ", name=" + name + ", favorite=" + favorite + ", IMDBNote=" + imdbRate
 				+ ", launchYear=" + launchYear + "}";
 	}
 	
