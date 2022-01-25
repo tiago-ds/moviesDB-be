@@ -1,4 +1,4 @@
-package com.moviedb.MovieDB.models;
+package com.moviedb.moviedb.models;
 
 public class ImdbRatings {
 	private String imdbId;

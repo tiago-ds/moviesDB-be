@@ -1,4 +1,4 @@
-package com.moviedb.MovieDB.repositories;
+package com.moviedb.moviedb.repositories;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.moviedb.MovieDB.models.Movie;
+import com.moviedb.moviedb.models.Movie;
 
 public interface MovieRepository extends JpaRepository<Movie, String>{
 	
@@ -18,9 +18,6 @@ public interface MovieRepository extends JpaRepository<Movie, String>{
 	int deleteMovieById(@Param("id") int id);
 	
 	Movie findMovieById(int id);
-	
-	@Query(value="SELECT * FROM movie WHERE favorite=:isFavorite ORDER BY launch_year ASC", nativeQuery=true)
-	public List<Movie> getMoviesWhereFavoriteIs(@Param("isFavorite") boolean isFavorite);
 	
 	@Query(value="SELECT * FROM movie ORDER BY launch_year ASC", nativeQuery=true)
 	public List<Movie> getAllMoviesSorted();

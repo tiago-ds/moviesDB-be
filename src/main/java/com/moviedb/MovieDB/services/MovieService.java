@@ -1,4 +1,4 @@
-package com.moviedb.MovieDB.services;
+package com.moviedb.moviedb.services;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,10 +8,10 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.moviedb.MovieDB.models.ImdbMovie;
-import com.moviedb.MovieDB.models.ImdbRatings;
-import com.moviedb.MovieDB.models.Movie;
-import com.moviedb.MovieDB.repositories.MovieRepository;
+import com.moviedb.moviedb.models.ImdbMovie;
+import com.moviedb.moviedb.models.ImdbRatings;
+import com.moviedb.moviedb.models.Movie;
+import com.moviedb.moviedb.repositories.MovieRepository;
 
 @Service
 public class MovieService {
@@ -112,11 +112,6 @@ public class MovieService {
 		}else {
 			return 0;
 		}
-	}
-	
-	public List<Movie> getMoviesWhereFavoriteIs(boolean isFavorite) {
-		List<Movie> result = this.movieRepository.getMoviesWhereFavoriteIs(isFavorite);
-		return result;
 	}
 	
 	public List<Movie> getAllMoviesSorted() {

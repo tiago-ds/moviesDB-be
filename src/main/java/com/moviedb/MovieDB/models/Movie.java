@@ -1,4 +1,4 @@
-package com.moviedb.MovieDB.models;
+package com.moviedb.moviedb.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -75,7 +75,7 @@ public class Movie {
 
 	@Override
 	public String toString() {
-		return "Movie {movieId=" + id + ", name=" + name + ", favorite=" + favorite + ", IMDBNote=" + imdbRate
+		return "Movie {movieId=" + id + ", name=" + name + ", favorite=" + favorite + ", ImdbRate=" + imdbRate
 				+ ", launchYear=" + launchYear + "}";
 	}
 	

@@ -1,6 +1,5 @@
-package com.moviedb.MovieDB.controllers;
+package com.moviedb.moviedb.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -15,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.moviedb.MovieDB.models.Movie;
-import com.moviedb.MovieDB.services.MovieService;
+import com.moviedb.moviedb.models.Movie;
+import com.moviedb.moviedb.services.MovieService;
 
 @RestController
 @RequestMapping("/movie")
@@ -78,19 +77,7 @@ public class MovieResource {
 			return new ResponseEntity<String>("ERROR: IMDB API DID NOT RESPOND", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-	
-	@GetMapping("/favorites")
-	public ResponseEntity<?> getFavoriteMovies() {
-		List<Movie> favoritedMovies = this.movieService.getMoviesWhereFavoriteIs(true);
-		
-		if(favoritedMovies != null) {
-			return new ResponseEntity<>(favoritedMovies, HttpStatus.OK);
-		} else {
-			return new ResponseEntity<>("ERROR: COULD NOT FIND MOVIES", HttpStatus.INTERNAL_SERVER_ERROR);
-		}
-	}
 
-	
 	@PutMapping("/")
 	public ResponseEntity<?> updateMovie(@RequestBody Movie movie) {
 		Movie updatedMovie = this.movieService.updateMovie(movie);

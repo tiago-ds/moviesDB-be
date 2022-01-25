@@ -1,4 +1,4 @@
-package com.moviedb.MovieDB.services;
+package com.moviedb.moviedb.services;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -6,9 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.moviedb.MovieDB.models.ImdbMovie;
-import com.moviedb.MovieDB.models.ImdbRatings;
-import com.moviedb.MovieDB.models.ImdbResponse;
+import com.moviedb.moviedb.models.ImdbMovie;
+import com.moviedb.moviedb.models.ImdbRatings;
+import com.moviedb.moviedb.models.ImdbResponse;
 
 
 @Service

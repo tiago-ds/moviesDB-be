@@ -1,4 +1,4 @@
-package com.moviedb.MovieDB;
+package com.moviedb.moviedb;
 
 import java.util.Arrays;
 
