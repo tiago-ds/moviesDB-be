@@ -20,7 +20,7 @@ public interface MovieRepository extends JpaRepository<Movie, String>{
 	Movie findMovieById(int id);
 	
 	@Query(value="SELECT * FROM movie ORDER BY launch_year ASC", nativeQuery=true)
-	public List<Movie> getAllMoviesSorted();
+	public List<Movie> getAllMovies();
 	
 	@Query(value="SELECT * FROM movie m WHERE m.name=:mName AND m.imdb_rate=:mRate AND m.launch_year=:mLaunch", nativeQuery=true)
 	public List<Movie> findMovie(@Param("mName") String mName, @Param("mRate") double mRate, @Param("mLaunch") int mLaunch);
