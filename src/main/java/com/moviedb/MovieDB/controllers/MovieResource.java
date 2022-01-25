@@ -45,25 +45,17 @@ public class MovieResource {
 		}
 	}
 	
-	@GetMapping("/")
-	public ResponseEntity<?> getAllMovies(@RequestParam(required = false) boolean sorted) {
-		List<Movie> movies;
+	@GetMapping("/batch/{offset}")
+	public ResponseEntity<?> getAllMovies(@PathVariable int offset) {
+
+		List<Movie> movies = this.movieService.getMoviesPage(offset);
 		
-		// Sorted Param
-		if(sorted) {
-			movies = this.movieService.getAllMoviesSorted();
-		}
-		else {
-			movies = this.movieService.getAllMovies();
-		}
 		// Return statements
 		if(movies != null) {
 			return new ResponseEntity<>(movies, HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>("ERROR: COULD NOT FIND MOVIES", HttpStatus.INTERNAL_SERVER_ERROR);
-		}
-		
-		
+		}	
 	}
 	
 	

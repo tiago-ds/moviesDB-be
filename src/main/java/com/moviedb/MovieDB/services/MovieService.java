@@ -85,11 +85,12 @@ public class MovieService {
 		return result;
 	}
 	
-	public List<Movie> getAllMovies() {
-		List<Movie> result = movieRepository.findAll();
+	// Return a page of {limit} movies from the DB, based on the offset
+	public List<Movie> getMoviesPage(int offset) {
+		List<Movie> result = this.movieRepository.getMoviesPage(offset);
 		return result;
 	}
-	
+
 	public Movie updateMovie(Movie movie) {
 		if(movie.getName().length() == 0 || movie.getImbdRate() == 0 || movie.getLaunchYear() == 0) {
 			return null;

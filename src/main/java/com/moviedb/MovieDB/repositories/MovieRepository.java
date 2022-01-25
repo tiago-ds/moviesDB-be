@@ -25,4 +25,7 @@ public interface MovieRepository extends JpaRepository<Movie, String>{
 	@Query(value="SELECT * FROM movie m WHERE m.name=:mName AND m.imdb_rate=:mRate AND m.launch_year=:mLaunch", nativeQuery=true)
 	public List<Movie> findMovie(@Param("mName") String mName, @Param("mRate") double mRate, @Param("mLaunch") int mLaunch);
 	
+	@Query(value="SELECT * FROM movie ORDER BY launch_year LIMIT :offset, 10;", nativeQuery=true)
+	public List<Movie> getMoviesPage(@Param("offset") int offset);
+	
 }
