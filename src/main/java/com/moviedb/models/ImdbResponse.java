@@ -1,4 +1,4 @@
-package com.moviedb.moviedb.models;
+package com.moviedb.models;
 
 public class ImdbResponse {
 	private String searchType;

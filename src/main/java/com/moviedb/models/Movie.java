@@ -1,4 +1,4 @@
-package com.moviedb.moviedb.models;
+package com.moviedb.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

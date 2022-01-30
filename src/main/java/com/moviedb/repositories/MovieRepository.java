@@ -1,4 +1,4 @@
-package com.moviedb.moviedb.repositories;
+package com.moviedb.repositories;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.moviedb.moviedb.models.Movie;
+import com.moviedb.models.Movie;
 
 public interface MovieRepository extends JpaRepository<Movie, String>{
 	

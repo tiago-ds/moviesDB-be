@@ -1,6 +1,6 @@
-package com.moviedb.moviedb.vo;
+package com.moviedb.vo;
 
-public class MovieVo {
+public class MovieVO {
 	private int id;
 	private String name;
 	private boolean favorite;
@@ -9,9 +9,9 @@ public class MovieVo {
 	private String image;
 	private String description;
 	
-	public MovieVo() {}
+	public MovieVO() {}
 	
-	public MovieVo(int id, String name, boolean favorite, double imdbRate, int launchYear, String image, String description) {
+	public MovieVO(int id, String name, boolean favorite, double imdbRate, int launchYear, String image, String description) {
 		this.id = id;
 		this.name = name;
 		this.favorite = favorite;
